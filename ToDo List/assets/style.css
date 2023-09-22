@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    height: 100%;
+}
+
+body {
+    background-color: #5863f8;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Teko', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+/* utility classes */
+.btn {
+    background-color: #A0CED9;
+    border: 1px solid #000;
+    border-radius: 0.2rem;
+    margin-top: 0.4rem;
+    padding: 0.6rem;
+}
+
+.btn-info {
+    background-color: beige;
+}
+
+.d-block {
+    display: block;
+}
+
+.m-t-1 {
+    margin-top: 1rem;
+}
+
+.form-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-vertical label {
+    margin: 1rem 0 0.5rem 0;
+}
+
+.form-vertical input {
+    padding: 1rem;
+}
+
+.headerMain {
+    background-color: #171d1c;
+    color: #efe9f4;
+    padding: 1rem;
+}
+
+.headerMain .logo {
+    font-size: 2rem;
+}
+
+.mainContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.formAddTaskContainer {
+    background-color: #efe9f4;
+    margin-top: 2rem;
+    max-width: 840px;
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+.taskContainer {
+    background-color: #efe9f4;
+    margin: 2rem;
+    max-width: 840px;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+.noTasks {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem;
+    text-align: center;
+}
+
+.taskList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.taskItem {
+    border: 1px solid #A0CED9;
+    border-radius: 0.4rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 49%;
+}
+
+@media screen and (max-device-width: 480px) {
+    .taskItem {
+        width: 100%;
+    }
+}
+
+.taskTitle {
+    font-weight: 400;
+}
+
+.taskItem[open] .taskTitle {
+    margin-bottom: 10px;
+}
+
+.footerMain {
+    background-color: #171d1c;
+    color: #FFF;
+    padding: 1rem;
+}
