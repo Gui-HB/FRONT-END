@@ -3,12 +3,13 @@
 }
 
 html {
-    font-size: 14px;
+    font-size: 15px;
     height: 100%;
+    color: #efe9f4;
 }
 
 body {
-    background-color: #5863f8;
+    background-color: #e6e6e9;
     display: flex;
     flex-direction: column;
     font-family: 'Teko', sans-serif;
@@ -17,17 +18,57 @@ body {
 }
 
 /* utility classes */
+
 .btn {
-    background-color: #A0CED9;
-    border: 1px solid #000;
-    border-radius: 0.2rem;
-    margin-top: 0.4rem;
-    padding: 0.6rem;
+    background-color: white;
+    color: black;
+    border-radius: 10rem;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1em 2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+.btn-pronto {
+    background-color: #16bac5;
+    color: black;
+    border-radius: 10rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 1em 2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
 }
 
 .btn-info {
-    background-color: beige;
+    background-color: #d1345b;
+    color: black;
+    border-radius: 10rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 1em 2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
 }
+
+.btn:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+}
+
+.btn:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+
 
 .d-block {
     display: block;
@@ -40,6 +81,7 @@ body {
 .form-vertical {
     display: flex;
     flex-direction: column;
+    
 }
 
 .form-vertical label {
@@ -48,7 +90,18 @@ body {
 
 .form-vertical input {
     padding: 1rem;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    background: transparent;
+    text-indent: 5px;
 }
+
 
 .headerMain {
     background-color: #171d1c;
@@ -68,7 +121,7 @@ body {
 }
 
 .formAddTaskContainer {
-    background-color: #efe9f4;
+    background-color: #171d1c;
     margin-top: 2rem;
     max-width: 840px;
     padding: 2rem;
@@ -79,7 +132,7 @@ body {
 }
 
 .taskContainer {
-    background-color: #efe9f4;
+    background-color: #171d1c;
     margin: 2rem;
     max-width: 840px;
     padding: 1rem;
