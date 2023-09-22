@@ -1,0 +1,37 @@
+html {
+    font-size: 15px;
+    height: 100%;
+    color: #141414;
+}
+
+.headerMain {
+    background-color: #141414;
+    color: #efe9f4;
+    padding: 1rem;
+}
+
+.headerMain .logo {
+    font-size: 2rem;
+}
+
+body {
+    background-color: #dde1e4;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Teko', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+.mainContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.footerMain {
+    background-color: #141414;
+    color: #FFF;
+    padding: 1rem;
+}
