@@ -10,6 +10,8 @@ html {
 
 body {
     background-color: #e6e6e9;
+    background-image: url("ondas-suaves-de-cores-vibrantes-fluem-geradas-abstratamente-por-ia.jpg");
+    background-size: cover;
     display: flex;
     flex-direction: column;
     font-family: 'Teko', sans-serif;
@@ -89,11 +91,12 @@ body {
 }
 
 .form-vertical input {
+    
     padding: 1rem;
     width: 100%;
     padding: 10px 0;
     font-size: 1rem;
-    color: #000000;
+    color: #ffffff;
     margin-bottom: 30px;
     border: none;
     border-bottom: 1px solid #000000;
@@ -122,6 +125,7 @@ body {
 
 .formAddTaskContainer {
     background-color: #171d1c;
+    opacity: 0.97;
     margin-top: 2rem;
     max-width: 840px;
     padding: 2rem;
@@ -133,6 +137,7 @@ body {
 
 .taskContainer {
     background-color: #171d1c;
+    opacity: 0.97;
     margin: 2rem;
     max-width: 840px;
     padding: 1rem;
