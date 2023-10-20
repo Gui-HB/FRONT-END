@@ -1,0 +1,51 @@
+body {
+    background-color: #F1FFFA;
+    align-content: center;
+}
+
+form {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background: #2c2c2c;
+  }
+
+#frmCepSearch {
+    width: 80%;
+    background: #2c2c2c;
+    padding: 47px;
+    padding-bottom: 57px;
+    color: #fff;
+    border-radius: 17px;
+    font-size: 1.3em;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#frmShowCep {
+    width: 80%;
+    background: #2c2c2c;
+    padding: 47px;
+    padding-bottom: 57px;
+    color: #fff;
+    border-radius: 17px;
+    font-size: 1.3em;
+    align-items: center;
+    text-align: center;
+}
+
+input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    
+  }
+
+#frmShowCep #showCepInfo {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}

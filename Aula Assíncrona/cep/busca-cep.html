@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca CEP - Guilherme Henrique Baschera</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+    <form id="frmCepSearch">
+        <label for="cepSearch">
+            Informe seu CEP:
+        </label>
+        <input type="text" id="cepSearch" maxlength="8" minlength="8" required
+            placeholder="Digite seu CEP (somente números)">
+    </form>
+
+    <form id="frmShowCep"><h1 id="showCepInfo"></h1></form>
+
+    <script>
+        const frmCepSearch = document.querySelector("#frmCepSearch");
+        const showCepInfo = document.querySelector("#showCepInfo")
+
+        frmCepSearch.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const cepValue = frmCepSearch.cepSearch.value;
+
+            //console.log(cepValue);
+
+            //TODO validar se o campo é do tipo inteiro - isNaN
+
+            const request = fetch(`https://viacep.com.br/ws/${cepValue}/json/`)
+
+            request //tentar converter em async await
+                .then(function (response) {
+                    return response.json(); //retorna uma promise
+                })
+                .then(function (cepData) {
+                    showCepInfo.textContent = `Cidade: ${cepData.localidade}<br>UF: ${cepData.uf}`
+                    while (showCepInfo.firstChild) {
+                        showCepInfo.firstChild.remove();
+                    }
+                    //Sofri pra achar um jeito de quebrar a linha :)
+                    // Cria e adiciona o texto da cidade
+                    let cidadeText = document.createTextNode(`Cidade: ${cepData.localidade}`);
+                    showCepInfo.appendChild(cidadeText);
+
+                    // Cria e adiciona a quebra de linha
+                    let breakLine = document.createElement('br');
+                    showCepInfo.appendChild(breakLine);
+
+                    // Cria e adiciona o texto da UF
+                    let ufText = document.createTextNode(`UF: ${cepData.uf}`);
+                    showCepInfo.appendChild(ufText);
+                })
+                .catch(function () {
+                    console.log("Deu erro!");
+                })
+        });
+    </script>
+
+</body>
+
+</html>
