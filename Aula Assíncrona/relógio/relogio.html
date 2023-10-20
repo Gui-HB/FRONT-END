@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme Henrique Baschera</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <img src="assets/fundo.jpg" alt="">
+
+    <h1 id="clockDisplay" ></h1>
+
+    <script>
+
+        function adjustTime(value) {
+            //operador ternário
+            //return value < 10 ? "0" + value : value;
+
+            if (value < 10) {
+                return "0" + value;
+            }
+
+            return value
+        }
+
+        const clockDisplay = document.querySelector("#clockDisplay");
+
+        const clockInterval = setInterval(function () {
+            const actualDate = new Date();
+            const hour = adjustTime(actualDate.getHours());
+            const minute = adjustTime(actualDate.getMinutes());
+            const second = adjustTime(actualDate.getSeconds());
+
+            clockDisplay.textContent = hour + ":" + minute + ":" + second;
+        }, 1000);//1000 = milisegundos = 1 segundo
+
+        setTimeout(function() {
+            
+            clearInterval(clockInterval);
+
+        }, 5000);
+
+
+    </script>
+
+</body>
+
+</html>

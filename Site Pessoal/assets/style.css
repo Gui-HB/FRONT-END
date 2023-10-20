@@ -1,0 +1,19 @@
+html {
+    font-size: 15px;
+    height: 100%;
+    color: #DDE1E4;
+}
+
+body {
+    background-color: #141414;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Teko', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+.sitePessoal {
+    
+}
