@@ -19,13 +19,13 @@
         var(--c3) 0 180deg
       );
     background-size: var(--s) calc(var(--s) * 0.577);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
   }
 
-  
+
 
 @media screen and (min-width: 601px) {
     .sidebar {
@@ -79,7 +79,7 @@
         background-color: #0A0A0B99;
         background-size: auto;
         border-radius: 20px;
-
+        backdrop-filter: blur(5px);
     }
 
     h1 {
@@ -107,6 +107,14 @@
 
     .sidebar {
         transition: 0.3s;
+    }
+
+    .icone {
+        max-width: 100px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
 @media screen and (max-width: 600px) {
